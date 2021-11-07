@@ -23,6 +23,10 @@ char* actualGame(char* player1, char* player2)
 	{
 		return "Player1";
 	}
+	else if (((strchr(player2, 'r', 'o', 'c', 'k', '\0')) && (strchr(player1, 's', 'c', 'i', 's', 's', 'o', 'r', 's', '\0')) || ((strchr(player2, 'p', 'a', 'p', 'e', 'r', '\0')) && (strchr(player1, 'r', 'o', 'c', 'k', '\0'))) || ((strchr(player2, 's', 'c', 'i', 's', 's', 'o', 'r', 's', '\0')) && (strchr(player1, 'p', 'a', 'p', 'e', 'r', '\0')))))
+	{
+		return "Player2";
+	}
 }
 
 void printIntro()
