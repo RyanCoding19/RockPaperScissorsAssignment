@@ -51,7 +51,7 @@ namespace RPSUNITTESTING
 		{
 			char Player2[] = {'s', 'c', 'i', 's', 's', 'o', 'r', 's', '\0'};
 			char Player1[] = {'p', 'a', 'p', 'e', 'r', '\0'};
-			char Expected[] = "Player2";
+			char Expected[] = "Player1";
 			char* result = actualGame(Player1, Player2);
 
 			Assert::AreEqual(Expected, result);
@@ -78,11 +78,11 @@ namespace RPSUNITTESTING
 		}
 		TEST_METHOD(Player1_Player2_Invalid)
 		{
-			char  Player1[] = "ddddd";
-			char Player2[] = "dddddd";
+			char  Player1[] = "bbbbb";
+			char Player2 = NULL;
 			char Expected[] = "Invalid";
 
-			char* result = actualGame(Player1, Player2);
+			char* result = actualGame(Player1, &Player2);
 			
 			Assert::AreEqual(Expected, result);
 		}

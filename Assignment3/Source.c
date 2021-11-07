@@ -27,6 +27,12 @@ char* actualGame(char* player1, char* player2)
 	{
 		return "Player2";
 	}
+	else if ((player1 == NULL) || (player2 == NULL))
+	{
+		return "Invalid";
+	}
+	else
+		return "Invalid";
 }
 
 void printIntro()
